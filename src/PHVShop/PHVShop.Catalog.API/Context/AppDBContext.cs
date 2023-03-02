@@ -8,9 +8,9 @@ namespace PHVShop.Catalog.API.Context
     {
         public AppDBContext(DbContextOptions option) : base(option) { }
 
-        DbSet<Product> Products { get; set; }
+        public DbSet<Product> Products { get; set; }
 
-        DbSet<Category> Categories { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
