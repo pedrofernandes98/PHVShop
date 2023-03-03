@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PHVShop.Catalog.API.Context;
+using PHVShop.Catalog.API.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,9 @@ builder.Services.AddSwaggerGen();
 var conn = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDBContext>(options => options
                         .UseMySql(conn, ServerVersion.AutoDetect(conn)));
+
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 var app = builder.Build();
 
