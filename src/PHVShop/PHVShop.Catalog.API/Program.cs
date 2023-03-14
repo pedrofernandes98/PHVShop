@@ -1,6 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using PHVShop.Catalog.API.Context;
+using PHVShop.Catalog.API.DTOs.Mappings;
 using PHVShop.Catalog.API.Repositories;
+using PHVShop.Catalog.API.Services;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +13,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(Assembly.GetAssembly(typeof(MappingProfile)));
 
 var conn = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDBContext>(options => options
@@ -17,6 +21,9 @@ builder.Services.AddDbContext<AppDBContext>(options => options
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 var app = builder.Build();
 
