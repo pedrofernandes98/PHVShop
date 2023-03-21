@@ -28,6 +28,7 @@ namespace PHVShop.Catalog.API.DTOs
         public string? ImageURL { get; set; }
         public string? CategoryName { get; set; }
 
+        [JsonIgnore]
         public Category? Category { get; set; }
         public int CategoryId { get; set; }
     }
