@@ -57,8 +57,8 @@ namespace PHVShop.Catalog.API.Services
 
         public async Task DeleteCategory(int id)
         {
-            var categoryEntity = _categoryRepository.GetByIdAsync(id);
-            await _categoryRepository.DeleteAsync(categoryEntity.Id);
+            var categoryEntity = await _categoryRepository.GetByIdAsync(id);
+            await _categoryRepository.DeleteAsync(categoryEntity.CategoryId);
         }
     }
 }

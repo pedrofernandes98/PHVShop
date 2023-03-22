@@ -38,7 +38,7 @@ namespace PHVShop.Catalog.API.Controllers
             if (category == null)
                 return BadRequest($"Não foi encontrada a categoria de Id: {id}");
 
-            return Ok();
+            return Ok(category);
         }
 
         [HttpPost]
