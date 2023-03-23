@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PHVShop.Catalog.API", "PHVShop.Catalog.API\PHVShop.Catalog.API.csproj", "{E807D304-43E1-4120-B4E2-781F58D86930}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PHVShop.Catalog.API", "PHVShop.Catalog.API\PHVShop.Catalog.API.csproj", "{E807D304-43E1-4120-B4E2-781F58D86930}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PHVShop.Web", "PHVShop.Web\PHVShop.Web.csproj", "{757D2B3E-4084-4A27-BDCC-FC0AD78ADE45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{E807D304-43E1-4120-B4E2-781F58D86930}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E807D304-43E1-4120-B4E2-781F58D86930}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E807D304-43E1-4120-B4E2-781F58D86930}.Release|Any CPU.Build.0 = Release|Any CPU
+		{757D2B3E-4084-4A27-BDCC-FC0AD78ADE45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{757D2B3E-4084-4A27-BDCC-FC0AD78ADE45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{757D2B3E-4084-4A27-BDCC-FC0AD78ADE45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{757D2B3E-4084-4A27-BDCC-FC0AD78ADE45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
