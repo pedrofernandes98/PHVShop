@@ -73,7 +73,7 @@ namespace PHVShop.Catalog.API.Controllers
 
             await _productService.DeleteProduct(id);
 
-            return Ok($"Categoria de Id: {id} deletada com sucesso.");
+            return Ok($"Produto de Id: {id} deletada com sucesso.");
         }
     }
 }
