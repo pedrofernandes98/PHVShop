@@ -1,7 +1,17 @@
+using PHVShop.Web.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddHttpClient("CatalogApi", c =>
+{
+    c.BaseAddress = new Uri(builder.Configuration["ServiceUri:CatalogApi"]);
+});
+
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 var app = builder.Build();
 
